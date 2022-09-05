@@ -1,16 +1,12 @@
-# Distance mod template
+# Distance.WhatSongIsPlaying
+Don't you hate going all the way into the audio menu just to check what current song is playing in custom music?
+Wouldn't you love it if Distance could display what song is playing in game?
+Now you can!
 
-Use this repository as a base to create your own Distance mods.
+What this adds:
 
-# Using the template
-On github, click the `Use this template` button to create a new repository based on this one
+- Replace the timer text on the car screen with custom song info.
+- Replace the speedrun timer text with custom song info.
+- You can make it use the Album Artist metadata tag instead of the Artist metadata tag
 
-Once the repository is created, be sure to clone it locally **with submodules**:
-```sh
-git clone --recurse-submodules -j8 <your project .git url>
-```
-
-# Setting up the project
-After cloning the repository on your local drive, run the [setup.ps1](setup.ps1) script using [PowerShell 7 or higher](https://github.com/PowerShell/PowerShell#get-powershell).
-
-This script will rename the files correctly and replace their content to match your mod name.
+The mod can't do anything if your files lack metadata!
