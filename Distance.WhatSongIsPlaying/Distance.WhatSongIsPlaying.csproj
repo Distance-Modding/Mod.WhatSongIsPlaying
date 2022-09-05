@@ -7,11 +7,12 @@
     <ProjectGuid>{7BCB2908-B003-45D9-BE68-50CBA5217603}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mod.Template</RootNamespace>
-    <AssemblyName>Mod.Template</AssemblyName>
+    <RootNamespace>Distance.WhatSongIsPlaying</RootNamespace>
+    <AssemblyName>Distance.WhatSongIsPlaying</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
@@ -75,6 +76,9 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TagLibSharp">
+      <HintPath>..\..\taglib-sharp-TaglibSharp-2.3.0.0\src\TaglibSharp\bin\Debug\net35\TagLibSharp.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Centrifuge.GameSupport.Distance.3.0.7868.41513\lib\net35\UnityEngine.dll</HintPath>
     </Reference>
@@ -86,11 +90,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigLogic.cs" />
+    <Compile Include="Harmony\Assembly-CSharp\AudioManager\PlayMP3.cs" />
+    <Compile Include="Harmony\Assembly-CSharp\SpeedrunTimerLogic\Update.cs" />
+    <Compile Include="Harmony\Assembly-CSharp\TimeWidget\PrintText.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mod.Template.targets" />
+    <None Include="Distance.WhatSongIsPlaying.targets" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
