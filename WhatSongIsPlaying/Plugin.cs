@@ -27,7 +27,7 @@ namespace WhatSongIsPlaying
 
         private const string modGUID = "Distance.WhatSongIsPlaying";
         private const string modName = "What Song Is Playing";
-        private const string modVersion = "1.0.0";
+        private const string modVersion = "1.0.1";
 
         private static readonly Harmony harmony = new Harmony(modGUID);
         internal static ManualLogSource Log;
@@ -42,7 +42,7 @@ namespace WhatSongIsPlaying
             }
 
             Log = BepInEx.Logging.Logger.CreateLogSource(modGUID);
-            Logger.LogInfo("Thanks for using WhatSongIsPlaying");
+            Logger.LogInfo("Thanks for using What Song Is Playing");
 
             songTitle = string.Empty;
             songArtist = string.Empty;

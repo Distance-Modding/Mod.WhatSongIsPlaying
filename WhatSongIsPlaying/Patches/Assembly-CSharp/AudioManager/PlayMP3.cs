@@ -13,8 +13,8 @@ namespace WhatSongIsPlaying.Patches
 
             var tfile = File.Create(___currentCustomSongPath_);
             Mod.Instance.songTitle = tfile.Tag.Title;
-            Mod.Instance.songArtist = tfile.Tag.FirstPerformer;
-            Mod.Instance.songAlbumArtist = tfile.Tag.FirstAlbumArtist;
+            Mod.Instance.songArtist = string.Join(", ", tfile.Tag.Performers);
+            Mod.Instance.songAlbumArtist = string.Join(", ", tfile.Tag.AlbumArtists);
             tfile.Dispose();
         }
     }
